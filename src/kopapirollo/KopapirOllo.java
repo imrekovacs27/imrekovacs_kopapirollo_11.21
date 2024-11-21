@@ -1,20 +1,52 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package kopapirollo;
 
-/**
- *
- * @author KovácsImreJózsef(Szf
- */
+import java.util.Scanner;
+import java.util.Random;
+
 public class KopapirOllo {
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
-}
+        Scanner sc = new Scanner(System.in);
+        Random random = new Random();
+        System.out.println("egész: ");
+        int egesz = sc.nextInt();
+        System.out.println("1:Kő, 2:Papír, 3:Olló");
+        System.err.print("Választásod?:");
+        sc.nextInt();
+        
+        System.out.println("A gép választása:");
+        
+        System.out.println("Az eredmény");
+        int jatekos = sc.nextInt();
+        
+        int gep = random.nextInt(4);
+        System.out.println("Random Integer (0-4): " + gep);
+        
+        String jatekosnyer = "A játékos nyert";
+        String gepnyer = "A gép nyert";
+        
+        if(jatekos != gep ){
+            if (jatekos==2 && gep == 1 ){
+            System.out.println(jatekosnyer);
+            }
+            else if (jatekos == 1 && gep == 2 ){
+            System.out.println(gepnyer);
+            }
+            else if (jatekos == 3 && gep == 1 ){
+            System.out.println(gepnyer);
+        
+            }else if (jatekos == 1 && gep == 3 ){
+            System.out.println(jatekosnyer);    
+            
+        
+            }else if (jatekos == 2 && gep == 3 ){
+            System.out.println(gepnyer);    
+            }
+            else{
+                System.out.println(jatekosnyer);
+            }
+            
+        }else{
+                System.out.println("Döntetlen");
+        }
